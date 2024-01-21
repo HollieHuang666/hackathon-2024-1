@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Looking for friends? Talk to people at UBC IncognitoInbox anonymously!</h1>
+        <!-- Image container with dynamic source URL -->
+        <div class="image-container">
+            <img id="ubcmap" src="{{ url_for('static', filename='images/ubcmap.jpg') }}" alt="UBC Map">
+        </div>
+
+        <!-- Sign-up button -->
+        <button onclick="openSignUpModal()">Sign Up</button>
+
+        <!-- Modal for sign-up -->
+        <div id="signUpModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeSignUpModal()">&times;</span>
+                <form id="signUpForm" action="/submit_sign_up" method="post">
+                    <p>Enter your student number to sign up:</p>
+                    <input type="text" id="studentNumberInput" required>
+                    <button type="submit">Submit</button>
+                </form>
+        <!-- <div id="status">
+            <p>{{status}}</p>
+        </div> -->
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

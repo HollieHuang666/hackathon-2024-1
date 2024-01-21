@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tuts+ Chat Application</title>
+    <meta name="description" content="Tuts+ Chat Application" />
+    <link rel="stylesheet" href="../static/chat.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="menu">
+            <p class="welcome">Welcome <b></b></p>
+            <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+        </div>
+        <div id="chatbox">
+            <div>
+                <ul>
+                    {% for message in messages %}
+                        <li>
+                                {% if message %}
+                                    {{ message }}
+                                {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                
+            </div>
+        </div>
+        <form name="message" action="/chat" method="post">
+            <script type="text/javascript">
+                function clearForm() {
+                    document.getElementById('messageForm').reset();
+                }
+            </script>
+            <input name="usermsg" type="text" id="usermsg" />
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // jQuery Document 
+        $(document).ready(function () { });
+    </script>
+    <script type="text/javascript">
+        // jQuery Document 
+        $(document).ready(function () {
+            //If user wants to end session 
+            $("#exit").click(function () {
+                var exit = confirm("Are you sure you want to end the session?");
+                if (exit == true) { window.location = '/success'; }
+            });
+        });
+    </script>
+</body>
+
+</html>

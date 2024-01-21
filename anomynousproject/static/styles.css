@@ -1,0 +1,79 @@
+/* styles.css */
+
+body {
+    background-color: aquamarine;
+
+}
+
+#ubcmap {
+    opacity: 0.8;
+    width: 600px;
+    border-radius: 50%;
+    height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 20px 20px 30px darkturquoise;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.97;
+    width: 200px;
+    border-radius: 11%;
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: rgba(20, 234, 131, 0.32);
+    font-size: x-large;
+    color: #fefeff;
+    border-color: #1af2f2;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color:rgb(42, 50, 59);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #b4fba7;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
